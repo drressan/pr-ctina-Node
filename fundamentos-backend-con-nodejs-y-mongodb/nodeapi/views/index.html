@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <p>
+      <%= ejemplo %>
+    </p>
+
+    <p>
+      Ejemplo de condicionales
+      <% if (condicion.esPar) { %>
+        <p>El segundo actual <%= condicion.segundo %> es par</p>
+      <% } else { %>
+        <p>El segundo actual <%= condicion.segundo %> es impar</p>
+      <% } %>
+    </p>
+
+    <p>
+      Ejemplo de bucle
+      <% usuarios.forEach( usuario => { %>
+        <li>
+          El usuario <%= usuario.name %> tiene <%= usuario.age %> años.
+        </li>
+      <% }) %>
+    </p>
+
+  </body>
+</html>
